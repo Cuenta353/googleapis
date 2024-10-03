@@ -1,53 +1,10 @@
-# Google APIs
+9# Google APIs
 
 This repository contains the original interface definitions of public
 Google APIs that support both REST and gRPC protocols. Reading the
 original interface definitions can provide a better understanding of
 Google APIs and help you to utilize them more efficiently. You can also
-use these definitions with open source tools to generate client
-libraries, documentation, and other artifacts.
-
-## Building
-### Bazel
-
-The recommended way to build the API client libraries is through
-= 4.2.2.
-
-First, l.build/versions/master/install.html).
-
-To build all libraries:
-
-```
-bazel build //...
-```
-
-To test all libraries:
-
-```
-bazel test //...
-```
-
-To build one library in all languages:
-
-```
-bazel build //google/example/library/v1/...
-```
-
-To build the Java package for one library:
-
-```
-bazel build //google/example/library/v1:google-cloud-example-library-v1-java
-```
-
-Bazel packages exist in all the libraries for Java, Go, Python, Ruby, Node.js, PHP and C#.
-
-## Overview
-
-Google APIs are typically deployed as API services that are hosted
-under different DNS names. One API service may implement multiple APIs
-and multiple versions of the same API.
-
-Google APIs use [Protocol Buffers]protobuf)
+use these definitions with open source tools  in all the libraries for Java, Go, Python, Ruby, Node.js, PHP and otobuf)
 version 3 (proto3) as their Interface Definition Language (IDL) to
 define the API interface and the structure of the payload messages. The
 same interface definition is used for both REST and RPC versions of the
@@ -94,15 +51,6 @@ change to the API.
 To generate gRPC source code for Google APIs in this repository, you
 first need to install both Protocol Buffers and gRPC on your local
 machine, then you can run `make LANGUAGE=xxx all` to generate the
-source code. You need to integrate the generated source code into
-your application build system.
-
-**NOTE:** The Makefile is only intended to generate source code for the
-entire repository. It is not for generating linkable client library
-for a specific API. Please see other repositories under
-https://github.com/googleapis for generating linkable client libraries.
-
-### Go gRPC Source Code
-It is difficult to generate Go gRPC source code from this repository,
+source code. You need to integrate ce code from this repository,
 since Go has different directory structure.
 ad.
